@@ -5,17 +5,17 @@
   <form #formRegister="ngForm" (ngSubmit)="register()">
 
       <label for="name">Ingrese nombre</label>
-      <input type="text" [(ngModel)]="name" name="name" required>
+      <input type="text" [(ngModel)]="user.name" name="name" required>
 
       <br>
 
       <label for="email">Ingrese email</label>
-      <input type="text" [(ngModel)] ="email" name="email" required>
+      <input type="text" [(ngModel)]="user.email" name="email" required>
 
       <br>
 
       <label for="password">Ingrese contraseña</label>
-      <input type="password" [(ngModel)]="password" required name="password">
+      <input type="password" [(ngModel)]="user.password" required name="password">
 
 
     <button type="submit" [disabled]="formRegister.invalid">Registrarme</button>

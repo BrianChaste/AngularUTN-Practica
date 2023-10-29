@@ -17,8 +17,5 @@ import { AutenticationModule } from '../autentication/autentication.module';
     MainRoutingModule,
 
   ],
-  exports:[
-    MainPageComponent
-  ]
 })
 export class MainModule { }

@@ -20,8 +20,5 @@ import { FormsModule } from '@angular/forms';
     SharedModule,
     FormsModule
   ],
-  exports: [
-
-  ]
 })
 export class AutenticationModule { }

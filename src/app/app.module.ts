@@ -6,6 +6,8 @@ import { LandingModule } from './modules/landing/landing.module';
 
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoginComponent } from './modules/autentication/components/login/login.component';
+import { MainPageComponent } from './modules/main/components/main-page/main-page.component';
 
 
 

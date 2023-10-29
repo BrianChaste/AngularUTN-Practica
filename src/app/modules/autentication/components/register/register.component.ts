@@ -1,5 +1,5 @@
 import { NgForm } from '@angular/forms';
-import { UserService } from './../../../../core/services/user.service';
+import { UserService } from '../../services/user.service';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/core/models';
@@ -12,20 +12,20 @@ import { ApiService } from 'src/app/core/services/api.service';
 })
 export class RegisterComponent {
 
-  name: string = '';
-  email: string = '';
-  password: string = '';
-
+  public user = new User();
 
   constructor(private apiService: ApiService, private router: Router, private userService: UserService) { }
 
   public register() {
 
-    this.apiService.registerUser(new User(this.name, this.email, this.password)).subscribe({
+    this.apiService.registerUser(this.user).subscribe({
 
       next: (result) => {
 
-        this.userService.setUser(this);
+
+        this.userService.setUser(this.user); //FIXME: comuniar componentes con @Input | @Output
+
+
         this.router.navigate(['/main']);
 
       },
